@@ -29,12 +29,15 @@ export default async (input: string[], opts: PnpmOptions) => {
   // for the IPC connection
   await mkdirp(strictOpts.store)
   const ipcConnectionPath = createIpcConnectionPath(strictOpts.store)
-  const connectionOptions = {
+  const serverOptions = {
     path: ipcConnectionPath,
+  }
+  const connectionOptions = {
+    remotePrefix: `http://unix:${ipcConnectionPath}:`,
   }
   const serverJsonPath = path.join(strictOpts.store, 'server.json')
   await writeJsonFile(serverJsonPath, {connectionOptions})
-  const server = createServer(storeCtrl, connectionOptions)
+  const server = createServer(storeCtrl, serverOptions)
 
   onExit(() => {
     server.close()
