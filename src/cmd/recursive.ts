@@ -9,6 +9,7 @@ import {
   PnpmOptions,
 } from 'supi'
 import createStoreController from '../createStoreController'
+import requireHooks from '../requireHooks'
 
 export default async (input: string[], opts: PnpmOptions) => {
   let concurrency = 4
@@ -48,11 +49,26 @@ export default async (input: string[], opts: PnpmOptions) => {
 
   const store = await createStoreController(opts)
 
+  // It is enough to save the store.json file once,
+  // once all installations are done.
+  // That's why saveState that is passed to the install engine
+  // does nothing.
+  const saveState = store.ctrl.saveState
+  const storeController = {
+    ...store.ctrl,
+    saveState: async () => undefined,
+  }
+
   const limitInstallation = pLimit(concurrency)
 
   for (const chunk of chunks) {
-    await chunk.map((pkgPath: string) =>
-      limitInstallation(() => install({...opts, storeController: store.ctrl, prefix: pkgPath})),
+    await chunk.map((prefix: string) =>
+      limitInstallation(() => {
+        const hooks = requireHooks(prefix)
+        return install({...opts, hooks, storeController, prefix})
+      }),
     )
   }
+
+  await saveState()
 }
