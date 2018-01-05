@@ -1,4 +1,4 @@
-import {install, installPkgs, PnpmOptions} from 'supi'
+import {install, installPkgs, PnpmOptions} from 'supi-glitch'
 import createStoreController from '../createStoreController'
 import requireHooks from '../requireHooks'
 

@@ -1,4 +1,4 @@
-import {PnpmOptions} from 'supi'
+import {PnpmOptions} from 'supi-glitch'
 import {sync as runScriptSync} from '../runScript'
 
 export default function (input: string[], opts: PnpmOptions) {

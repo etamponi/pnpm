@@ -2,7 +2,7 @@ import createFetcher from '@pnpm/default-fetcher'
 import createResolver from '@pnpm/default-resolver'
 import { StrictPnpmOptions } from '@pnpm/types'
 import createStore from 'package-store'
-import { PnpmOptions } from 'supi'
+import { PnpmOptions } from 'supi-glitch'
 
 export default async (strictOpts: StrictPnpmOptions) => {
   const resolve = createResolver(strictOpts)

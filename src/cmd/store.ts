@@ -3,7 +3,7 @@ import {
   PnpmOptions,
   storePrune,
   storeStatus,
-} from 'supi'
+} from 'supi-glitch'
 import createStoreController from '../createStoreController'
 import {PnpmError} from '../errorTypes'
 import help from './help'

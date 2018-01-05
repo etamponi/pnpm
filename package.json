@@ -1,8 +1,8 @@
 {
-  "name": "pnpm",
+  "name": "pnpm-glitch",
   "bundledName": "@pnpm/bundled",
   "description": "Fast, disk space efficient package manager",
-  "version": "1.26.0",
+  "version": "2.1.0",
   "author": {
     "name": "Zoltan Kochan",
     "email": "z@kochan.io",
@@ -10,8 +10,8 @@
     "twitter": "ZoltanKochan"
   },
   "bin": {
-    "pnpm": "lib/bin/pnpm.js",
-    "pnpx": "lib/bin/pnpx.js"
+    "pnpm-glitch": "lib/bin/pnpm.js",
+    "pnpx-glitch": "lib/bin/pnpx.js"
   },
   "bugs": {
     "url": "https://github.com/pnpm/pnpm/issues"
@@ -58,6 +58,7 @@
     "signal-exit": "^3.0.2",
     "strip-color": "^0.1.0",
     "supi": "^0.9.0",
+    "supi-glitch": "^2.0.0",
     "text-table": "^0.2.0",
     "update-notifier": "^2.1.0",
     "write-json-file": "^2.3.0"
@@ -157,7 +158,7 @@
     "test:e2e": "preview --skip-prepublishOnly && npm-run-all -p -r pnpm-registry-mock test:tap",
     "test": "npm run lint && npm run tsc && npm run test:e2e",
     "tsc": "rimraf lib && tsc",
-    "prepublishOnly": "echo \"Publish is only allowed via 'npm run release'\" && exit 1",
+    "prepublishOnly": "npm run tsc",
     "release": "sh .scripts/release.sh",
     "version": "sh .scripts/version.sh"
   },

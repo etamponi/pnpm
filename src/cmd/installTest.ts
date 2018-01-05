@@ -1,4 +1,4 @@
-import {PnpmOptions} from 'supi'
+import {PnpmOptions} from 'supi-glitch'
 import install from './install'
 import runNpm from './runNpm'
 

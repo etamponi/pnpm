@@ -1,4 +1,4 @@
-import {PnpmOptions, prune} from 'supi'
+import {PnpmOptions, prune} from 'supi-glitch'
 import createStoreController from '../createStoreController'
 
 export default async (input: string[], opts: PnpmOptions) => {

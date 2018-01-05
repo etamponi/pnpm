@@ -4,7 +4,7 @@ import {
   linkFromGlobal,
   linkToGlobal,
   PnpmOptions,
-} from 'supi'
+} from 'supi-glitch'
 
 export default (
   input: string[],

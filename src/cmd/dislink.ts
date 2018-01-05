@@ -1,4 +1,4 @@
-import {PnpmOptions, unlink, unlinkPkgs} from 'supi'
+import {PnpmOptions, unlink, unlinkPkgs} from 'supi-glitch'
 
 export default function (input: string[], opts: PnpmOptions) {
   if (!input || !input.length) {

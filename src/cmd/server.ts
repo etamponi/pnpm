@@ -6,7 +6,7 @@ import isWindows = require('is-windows')
 import mkdirp = require('mkdirp-promise')
 import path = require('path')
 import onExit = require('signal-exit')
-import { PnpmOptions } from 'supi'
+import { PnpmOptions } from 'supi-glitch'
 import extendOptions from 'supi/lib/api/extendOptions'
 import writeJsonFile = require('write-json-file')
 import createStore from '../createStore'

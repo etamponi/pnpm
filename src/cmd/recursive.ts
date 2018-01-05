@@ -7,7 +7,7 @@ import sortPkgs = require('sort-pkgs')
 import {
   install,
   PnpmOptions,
-} from 'supi'
+} from 'supi-glitch'
 import createStoreController from '../createStoreController'
 import requireHooks from '../requireHooks'
 

@@ -2,7 +2,7 @@ import logger from '@pnpm/logger'
 import {connectStoreController} from '@pnpm/server'
 import loadJsonFile = require('load-json-file')
 import path = require('path')
-import {PnpmOptions} from 'supi'
+import {PnpmOptions} from 'supi-glitch'
 import extendOptions from 'supi/lib/api/extendOptions'
 import createStore from './createStore'
 

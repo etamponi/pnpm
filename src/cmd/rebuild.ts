@@ -3,7 +3,7 @@ import {
   PnpmOptions,
   rebuild,
   rebuildPkgs,
-} from 'supi'
+} from 'supi-glitch'
 
 export default async function (
   args: string[],
