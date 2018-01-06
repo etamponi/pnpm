@@ -112,6 +112,7 @@ async function run (argv: string[]) {
   }
   const pnpmTypes = {
     'child-concurrency': Number,
+    'custom-install': String,
     'fetching-concurrency': Number,
     'global-path': path,
     'ignore-pnpmfile': Boolean,

@@ -35,7 +35,7 @@ dependencies:
   signal-exit: 3.0.2
   strip-color: 0.1.0
   supi: 0.9.0
-  supi-glitch: 2.0.0
+  supi-glitch: 2.2.1
   text-table: 0.2.0
   update-notifier: 2.3.0
   write-json-file: 2.3.0
@@ -5725,7 +5725,7 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-PFMZQukIwml8DsNEhYwobHygpgo=
-  /supi-glitch/2.0.0:
+  /supi-glitch/2.2.1:
     dependencies:
       '@pnpm/check-package': 1.0.0
       '@pnpm/default-fetcher': 0.3.1
@@ -5796,7 +5796,7 @@ packages:
     peerDependencies:
       '@pnpm/logger': ^1.0.0
     resolution:
-      integrity: sha1-3yjMXxJjDHv2L8DuZLq9S5MbyeY=
+      integrity: sha1-Atx86jzh7bWTXoMwq6D77jnWKwU=
   /supi/0.9.0:
     dependencies:
       '@pnpm/check-package': 1.0.0
@@ -6691,7 +6691,7 @@ specifiers:
   signal-exit: ^3.0.2
   strip-color: ^0.1.0
   supi: ^0.9.0
-  supi-glitch: ^2.0.0
+  supi-glitch: ^2.2.1
   tape: ^4.6.3
   tape-promise: ^2.0.1
   text-table: ^0.2.0
